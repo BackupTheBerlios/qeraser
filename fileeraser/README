@@ -1,0 +1,12 @@
+Readme - File_eraser
+--------------------
+
+Why should I use File_eraser to delete my files?
+-Well, you don't need to use File_eraser to delete your files, of course!
+ But if you have secret files that you want to erase forever, File_eraser
+ would be a good choice to do that, because it overwrites the files complete
+ instead of only unlink the files in your filesystem.
+ So it's impossible to recover the secret datas!
+
+If you have a problem, please go to http://www.nebit.de for support!
+Or you can send a mail to support@nebit.de with a exact report of your problem!

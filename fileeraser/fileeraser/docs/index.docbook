@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//Norman Walsh//DTD DocBk XML V3.1.4//EN"
+                         "http://nwalsh.com/docbook/xml/3.1.4/db3xml.dtd" [
+<!ENTITY chap1 SYSTEM "chap1.sgm">
+<!ENTITY chap2 SYSTEM "chap2.sgm">
+<!ENTITY chap3 SYSTEM "chap3.sgm">
+]>
+<book>
+<bookinfo>
+	<title>FileEraser</title>
+	<author><firstname>Tobias</firstname><surname>Gl‰ﬂer</surname></author>
+</bookinfo>
+&chap1;
+&chap2;
+&chap3;
+</book>

@@ -1,0 +1,15 @@
+
+[executer]
+RunInTerminal=true
+
+[Project DBase]
+ShowLocals=true
+
+[filelist]
+0=/home/tobgle/.anjuta/user.properties
+
+[filenumbers]
+0=1
+
+[filemarkers]
+0=

@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>Nebit-Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body { margin-left:4px; margin-right:2px; margin-top:0px; margin-bottom:0px }
+</style>
+<style><!-- A:link {text-decoration: underline}     A:visited {text-decoration: underline; color: #000000}     A:active {text-decoration: none}     A:hover {text-decoration: none; color: #000000}--></style>
+</head>
+<body bgcolor="#FFFFFF">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEEEE">
+  <tr> 
+    <td><font size="7">Nebit-Manual (Handbuch)</font></td>
+    <td align="right" height="50"><img src="../../nebitlr.gif" width="90" height="50"></td>
+  </tr>
+  <tr> 
+    <td colspan="2"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr> 
+          <td colspan="2" valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  <p><img src="../../dflag.gif" width="24" height="14"> <b><font size="6">Perlscripts 
+                    einrichten</font></b></p>
+                </td>
+                <td><img src="../../eflag.gif" width="24" height="14"> <b><font size="6">Installing 
+                  perlscripts</font></b></td>
+              </tr>
+              <tr> 
+                <td colspan="2"> <br>
+                  <hr>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td width="50%"> <br>
+            <font size="+4">Inhalt:</font> 
+            <ul>
+              <li><font size="+3"><a href="#vor">Vorwort</a></font></li>
+              <li><font size="+3"><a href="#scr">Scripte anpassen</a></font></li>
+              <li><font size="+3"><a href="#up">Upload</a></font></li>
+              <li><font size="+3"><a href="#ch">chmod 755 ...</a></font></li>
+              <li><font size="+3"><a href="#in">Internal Server Error 500</a></font><br>
+              </li>
+            </ul>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+              <tr> 
+                <td bgcolor="#CCCCCC"> 
+                  <p><b><a name="vor"></a><font size="+2">Vorwort:</font></b></p>
+                </td>
+              </tr>
+              <tr valign="middle" align="left"> 
+                <td> 
+                  <p>Das einrichten von Perlscripts sorgt vor allem bei Anf&auml;ngern 
+                    h&auml;ufig f&uuml;r Verwirrung. Dabei muss man doch eigentlich 
+                    nur ein paar Grundprinzipien verstehen:<br>
+                    <br>
+                    Die meisten Server die Perlscripts unterst&uuml;tzen laufen 
+                    unter einem Linuxsystem, daher muss man falls das script zuvor 
+                    auf einer anderen Plattform, wie z. B Windows oder Mac bearbeitet 
+                    wurde das Script auf jeden Fall im ASCII Modus hochladen, 
+                    damit die systemabh&auml;ngigen Zeilenumbr&uuml;che korrekt 
+                    interpretiert werden k&ouml;nnen.<br>
+                    Genauso wichtig ist es wegen der Zugriffssicherheit der Linuxsysteme 
+                    die Zugriffsrechte der Scripts richtig zu setzen.<br>
+                    <br>
+                    Eine genaue Beschreibung zur Einrichtung von Perlscripts folgt 
+                    unter den n&auml;chsten Punkten.</p>
+                </td>
+              </tr>
+              <tr> 
+                <td bgcolor="#CCCCCC"> 
+                  <p> </p>
+                  <p><b><a name="scr"></a><font size="+2">Scripte anpassen:</font></b></p>
+                </td>
+              </tr>
+              <tr valign="middle" align="left"> 
+                <td> 
+                  <p>Vor dem Upload sollten die Scripts f&uuml;r den jeweiligen 
+                    Server angepasst werden!</p>
+                  <p>Die erste Zeile jedes Scriptes ist wichtig f&uuml;r den Betrieb 
+                    auf Linuxsystemen. Sie gibt den serverinternen Pfad zum Perlinterpreten 
+                    an. Meistens funktioniert mindestens eine der folgenden M&ouml;glichkeiten: 
+                    <br>
+                    <b>#!/usr/bin/perl<br>
+                    </b>oder<b><br>
+                    #!/usr/local/bin/perl<br>
+                    <br>
+                    </b>Pfadangaben:<br>
+                    Ihr Host sollte Ihnen auf seiner Website Informationen zu 
+                    den n&ouml;tigen Pfadangaben bereitgestellen. Generell ist 
+                    es bei Pfadangaben wichtig auf die richtige Gro&szlig;- und 
+                    Kleinschreibung zu achten. Beispiele f&uuml;r Pfadangaben:<br>
+                    <br>
+                    <br>
+                    <br>
+                    Bei den meisten Scripts braucht man irgendwo einen Basedirectory-Pfad 
+                    <br>
+                    und genau da entstehen (und nicht nur bei Exit) die meisten 
+                    Fehler.<br>
+                    Auf Exit muss er wie folgt aussehen:<br>
+                    <b>/usr/local/apache/htdocs/clans/x/member/y</b></p>
+                  <p>x = der Name deines Clans KLEINGESCHRIEBEN<br>
+                    y = dein Username mit richtiger Gro&szlig;-Kleinschreibung<br>
+                    <br>
+                    dahinter k&ouml;nnen auch noch Unterverzeichnisse von dir 
+                    kommen.<br>
+                    Das wichtigste dabei ist aber &uuml;berall die richtige Schreibung, 
+                    denn Exit<br>
+                    ben&uuml;tzt einen Linux-Server und Linux-Server unterscheiden 
+                    zwischen<br>
+                    Gro&szlig;- und Kleinschreibung: <br>
+                    <b> script.pl ist </b><i>also eine andere Datei</i><b> als 
+                    Script.pl</b></p>
+                  <p><br>
+                    Deshalb ist das auch allgemein bei Pfadangabe im Script zu 
+                    beachten.</p>
+                </td>
+              </tr>
+              <tr> 
+                <td bgcolor="#CCCCCC"> 
+                  <p> </p>
+                  <p><b><a name="up"></a><font size="+2">Upload:</font></b></p>
+                </td>
+              </tr>
+              <tr valign="middle" align="left"> 
+                <td> 
+                  <p><br>
+                    Scripts muss man mit einem FTP-Programm uploaden,<br>
+                    dass man sich aus dem Netz ziehen kann: (Empfohlen: <i><a href="http://www.ipswitch.com/products/ws_ftp/">WS_FTP</a></i>)</p>
+                  <p><b>Windows:</b><br>
+                    <i><a href="http://www.ipswitch.com/products/ws_ftp/">WS_FTP</a><br>
+                    <a href="http://www.cuteftp.com/">Cute FTP</a></i><br>
+                    <b>Macintosh:</b><br>
+                    <i><a href="http://www.stairways.com/anarchie/">Anarchie</a></i> 
+                    <br>
+                    <b>OS/2:</b><br>
+                    <i><a href="ftp://ftp-os2.cdrom.com/pub/os2/network/tcpip/gcpftp10.zip">Gibbon 
+                    FTP</a></i><br>
+                    <b>Unix:</b><br>
+                    <i><a href="http://www.llnl.gov/ia/xftp.html">LLNL XFTP</a></i><br>
+                  </p>
+                  <p>Der Host f&uuml;r CGI-Scripte auf Exit muss wie folgt lauten:<br>
+                    <b>cgi.exit.de</b></p>
+                  <p>CGI-Scripts m&uuml;ssen in ASCII formatiert upgeloaded werden!<br>
+                    Au&szlig;erdem m&uuml;ssen sie auf den meisten Servern auf 
+                    den chmod 755 gestellt werden!<br>
+                  </p>
+                </td>
+              </tr>
+              <tr> 
+                <td bgcolor="#CCCCCC"> 
+                  <p> </p>
+                  <p><b><a name="ch"></a><font size="+2">chmod 755 ... :</font></b></p>
+                </td>
+              </tr>
+              <tr valign="middle" align="left"> 
+                <td> 
+                  <p><br>
+                    chmod ist ein Unixbefehl.<br>
+                    Damit werden die Zugriffsrechte einer Datei vergeben.<br>
+                    <br>
+                    Manuel kann der Befehl zum Beispiel hei&szlig;en:<br>
+                    <b>quote site chmod 755 datei.cgi/pl</b><br>
+                    <br>
+                    Mit Programmen wie WS_FTP oder CuteFTP, die ich an dieser 
+                    stelle<br>
+                    zu empfehlen sind, geht das ganze aber viel leichter. <br>
+                    <br>
+                    Bei WS_FTP muss man nur mit der rechten Maustaste auf das 
+                    Script und dann auf chmod klicken. <br>
+                    <br>
+                    Dann kann man die Zugriffsrechte einstellen (folgende Kombi 
+                    steht f&uuml;r 755):<br>
+                    <b>xxx<br>
+                    x--<br>
+                    xxx<br>
+                    </b></p>
+                </td>
+              </tr>
+              <tr> 
+                <td bgcolor="#CCCCCC"><b><a name="in"></a><font size="+2">Internal 
+                  Server Error 500:</font></b></td>
+              </tr>
+              <tr valign="middle" align="left"> 
+                <td> 
+                  <p><br>
+                    Wenn dieser Fehler erscheint, dann wurde immerhin ein Teil 
+                    richtig gemacht!<br>
+                    <br>
+                    Als erstes sollte man das Script noch zweimal genau &uuml;berpr&uuml;fen.</p>
+                  <p>H&auml;ufige Fehler:</p>
+                  <ol>
+                    <li>das Zeichen <b>&quot;</b> wurde im HTML-Ausgabeteil des 
+                      Scripts nicht durch <b>' </b><br>
+                      ersetzt oder es wurde vergessen vergessen<b> \ </b>davor 
+                      zu setzen!</li>
+                    <li>im Quellcode wurde eine <b>Klammer</b> vergessen oder 
+                      ein <b>Semikolon</b>!</li>
+                    <li>oder man hat zum Beispiel ausversehen eine unendliche 
+                      Schleife geschrieben!</li>
+                  </ol>
+                  <p>Dies sind nur ein paar m&ouml;gliche Fehler, die einem schon 
+                    mal unterlaufen k&ouml;nnen.<br>
+                    Wenn man den Fehler nicht findet, sollte man im <a href="http://www.teamone.de/selfhtml/">Kompendium 
+                    von Stefan M&uuml;nz</a><br>
+                    nachschauen was ihr falsch gemacht habt!</p>
+                </td>
+              </tr>
+            </table>
+            <p><br>
+            </p>
+          </td>
+          <td width="50%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2" valign="top">F&uuml;r weitere Hilfe / For further support: 
+            <a href="mailto:support@nebit.de">support@nebit.de</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

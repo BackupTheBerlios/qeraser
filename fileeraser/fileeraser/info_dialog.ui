@@ -1,0 +1,275 @@
+<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<class>Info_Dialog</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>Info_Dialog</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>320</width>
+            <height>460</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>5</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>320</width>
+            <height>460</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Info</string>
+    </property>
+    <property name="icon">
+        <pixmap>image0</pixmap>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>5</number>
+        </property>
+        <property name="spacing">
+            <number>6</number>
+        </property>
+        <spacer row="0" column="0">
+            <property name="name">
+                <cstring>Spacer2_2</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QLabel" row="0" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>NebitLogo</cstring>
+            </property>
+            <property name="pixmap">
+                <pixmap>image1</pixmap>
+            </property>
+            <property name="scaledContents">
+                <bool>false</bool>
+            </property>
+            <property name="alignment">
+                <set>AlignCenter</set>
+            </property>
+        </widget>
+        <widget class="QGroupBox" row="4" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>contactinfo</cstring>
+            </property>
+            <property name="title">
+                <string>Contact Information</string>
+            </property>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>contactlabel2</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>140</x>
+                        <y>20</y>
+                        <width>150</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>http://www.nebit.de</string>
+                </property>
+                <property name="indent">
+                    <number>-1</number>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>contactlabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>20</y>
+                        <width>120</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Nebit Homepage:</string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QLabel" row="1" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>programversioncopyright</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <underline>1</underline>
+                </font>
+            </property>
+            <property name="text">
+                <string>File_eraser v.0.85 is copyrighted (c) by Nebit</string>
+            </property>
+            <property name="scaledContents">
+                <bool>false</bool>
+            </property>
+            <property name="alignment">
+                <set>AlignCenter</set>
+            </property>
+        </widget>
+        <widget class="QGroupBox" row="2" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>GPLBox</cstring>
+            </property>
+            <property name="title">
+                <string>GNU General Public License</string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>5</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QTextBrowser" row="0" column="0">
+                    <property name="name">
+                        <cstring>GPLbrowser</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="acceptDrops">
+                        <bool>false</bool>
+                    </property>
+                    <property name="lineWidth">
+                        <number>2</number>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <property name="resizePolicy">
+                        <enum>Manual</enum>
+                    </property>
+                    <property name="hScrollBarMode">
+                        <enum>Auto</enum>
+                    </property>
+                    <property name="dragAutoScroll">
+                        <bool>true</bool>
+                    </property>
+                    <property name="textFormat">
+                        <enum>AutoText</enum>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget class="QGroupBox" row="3" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>creditsBox</cstring>
+            </property>
+            <property name="title">
+                <string>Credits</string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>5</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QTextBrowser" row="0" column="0">
+                    <property name="name">
+                        <cstring>creditsbrowser</cstring>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget class="QPushButton" row="5" column="1">
+            <property name="name">
+                <cstring>close_button</cstring>
+            </property>
+            <property name="text">
+                <string>Close</string>
+            </property>
+        </widget>
+        <spacer row="5" column="0">
+            <property name="name">
+                <cstring>Spacer2</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <spacer row="5" column="2">
+            <property name="name">
+                <cstring>Spacer4</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+    </grid>
+</widget>
+<images>
+    <image name="image0">
+        <data format="XPM.GZ" length="1256">789cd3d7528808f055d0d2e72a2e492cc94c5648ce482c52d04a29cdcdad8c8eb5ade6523236520022130543251d2e253d856405bffcbc54103b11c856360002b344105719c64d4a01719340dcb434900058230180ae461902121313f1a849028141a4860837630323267c46d58caaa1440db9f9abd69a0b00dfff05ce</data>
+    </image>
+    <image name="image1">
+        <data format="XPM.GZ" length="12036">789ce55adb8edc360c7ddfaf18446f4131d9cb647783a29fd0a28f058a3ec8962dc9b2b7409b3e1445ffbda6eed4c59667bb4180304076e8a1463a227944d3fef0fef4cbcf3f9ede7fb8f9f333fd2cfb532fe81fa7f7ecaf65f9fbd7df7ef8e7e6ddfde5f174793add3d9eeede7d77f3ee7cea4f3ffdfe32c0e7d5fa446e9f6f2f1f29a8b355fbdb5b5017a3de5d6e9f411d40bd7bbebfdc69f505d4fb4ff797874fa02a501f3e3df4f75aed40bdd087fea9035582fa917e64173d1103f5a97b628f5a9d9c4a7b504750694f07a30aa7760c540e6acffaa1d72a05950df00f5402ea308c8f8356cfdfa424c809a54533aae5cb2ce90b4982bceb3b52b0a23d4877e487d9b006559b19f79a9052360c7a8510c198990f23275ddf4f057bae9197bea98a9ae79937992d2196e43ae84d911309b3e8293072eddb42508f1af99135916185540a9fdc4c05b3c6edba5ed8c8193b33714e918b4a504f1af99135f16585d460b642955e837d18f6b7eb7a218a28f0383ba7c86b08bbbe120c551911a44d33e635d88786edba5e00f9fa87c2ca4ac8339223e5cb5bc2da3216cc84d7f03ebc8548cee50a1b56869013e3db5e24f65750fbd7497067ae38398f127c88901b84b977c5616ad704d7901d7c95a0a9b641af112a95641a1e42ce2df214e4548c842db92a63e9f2c604a7c54d80900b873c21b332c111cac5380a5e5a6b20b8d56a1c474e1b10f13656fc9f04219ffaa2d36dfaa3b51321d5ea229041b12c4481b9266c25c73c90d7820ac6ae672c08a4b9321f37629ec492eaf6da61e49d478e4e369a25ff7af733c7b2c864a99ae0c8a890d5900102acd4ec13963a39623b62ea5f2468ace8ca2210721280239c59ed2a866ca9b846d704c7556e85b9c2552e32b3abfa3c313c9b9a09094a98a92fcb84905bdf66275b42ed84f9f85d99593069a68e0f62c8d8455f5e1403ab91996d58d00601a549a82f52e47572d460b164fb166f5b1b728b302b6730b513339312de80b225813eda352c517c73332e66106147997b60d0a4f958cdd539410eaa4891c73e68436e6b579a921ca6769607f7d90476b866dda070ba8e90244b144cb8d06ba9e032e0732164e25c6943ee105a6b3fdea8d1fae6216520aad08c662d2a751d1ff0ba6456c1edd40c24434ece21c24a4e3f807c8d727b8a39a7a3da55f3498180e81073cb52046e03333010105cf85225295a9034cb8d9e3b3dcdd41de4c42314c8e988e06092a574e6c0c63b07720dbc848245568ee0dcf4781f4a527679e1540c29d4843c1c5ed6e95d3cd8c4a1481924ac4a05fa1a937c0e0260fd7831a7b7a83b155c29cbf5afa6a76c08b726e42220b405bcf16d177d5673b5b406b8f63492751032581d27b81af2dce97edb9b904f195a73b245b52badbadcb8d3f69f5425232c3ed7a53a7a8b5ace72373776fa21e471756e4f36d83a1245fe34d7ef23214f4dd59934d790680ae07e40143ffbb7a85597e7d58cdff826e42f516e47dd191e21d7b19add2258512ecaf846dc6aef9858a4b16f1a7a7073a18a71c2d37077c9d6821c375ee88b3588a95dbb7549ef109c2c2e5cc7b97e30136f55e8c16d13dc86cb5d0511399db6234faa735fce44d49ea553267ab8bd03db437e90e0b65c5e2f615b90278d175fce44b56b165365e46aa3d51e45fb4182abf39b5e6ea5846d419e365e6c39630f38e291cb2d0162215b4da5c0700709ae56c538a994b0edc8c3cfb972c6fc1f96bddb2204ab2af250ea01c14515dc5e0f6edbe5968390d34923721221b40890a15eec3237f492e33a369350c91c7bc8b0e7f25a09db80bcd0538f9a53f61c1af692d181abed4f54bd1e23b83d97d74ad806e4859e3a0d86b6f65073f5e8810eabee3192e45e1d090bbb728ce0368fb4f01348781bf2524f3d0ca361e1e56cd469a677d9ec7d3972f577ca0f6827b806e0e5865c03f2524fdd9633a135c5abee64fe1b73f495eb7619c6e3c4de23b816e4c512761f39311792c9dd3897fe3a924b25b958fc1763d8f054c66075ac824b911681e7e5066b415e7e68e81e31faf41fe72213f1a8c3e6763e0f0d636583e110c135b93c2f61650bf2cafb20b69c09959d2a41d790dc551d1673da603edb06a4efbde2ded336c1ed1f6976866b901b8b6c7292a6bfe12f19cf4c0c241bc5e6ccd7de65b155d29ac60447b67b708d2ecf4ad826e471e325169ea6bff1aff20fc9a87d84a4a21edc6079568d6e20b58fa3fc666082a39bb7a8ad2e37fd8383c833df7ae9d2f437d0e741b269624cd9fac147c164661c632bf7587109d97484e0f6ab18274909db845caba5f7416896fe342b19e6c13b57672c402a3c558b1f3ce0c49e0ae411234da47efce112b60579dc784964ca894fd49f9186ce0c99b00342e883e404577dc84032e455e067c2635927a0bc2cd421a7ce3217da7585f45fc31c3a8ecba098402ee0c2bf4b4084b7922cf98dc8cc6862eb46ed2de4156ffc6e3ffbb342beda1766bfe1779dfffdfee63f2399d677</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>close_button</sender>
+        <signal>clicked()</signal>
+        <receiver>Info_Dialog</receiver>
+        <slot>accept()</slot>
+    </connection>
+</connections>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

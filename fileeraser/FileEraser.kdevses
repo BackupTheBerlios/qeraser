@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE KDevPrjSession>
+<KDevPrjSession>
+ <DocsAndViews NumberOfDocuments="0" />
+ <pluginList>
+  <kdevdoxygen/>
+  <kdevctags/>
+  <kdevfilegroups/>
+  <kdevclassview/>
+  <kdevperforce/>
+  <kdevcvs/>
+  <kdevfileview/>
+  <kdevdebugger>
+   <breakpointList/>
+  </kdevdebugger>
+  <kdevdistpart/>
+ </pluginList>
+</KDevPrjSession>
